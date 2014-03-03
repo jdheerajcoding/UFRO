@@ -33,4 +33,5 @@ void loop()
     char toSend = (char)Serial.read();
     bluetooth.print(toSend);
   }
+}
 
