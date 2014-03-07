@@ -1,7 +1,7 @@
 #include <SoftwareSerial.h>
 
-int bluetoothTx = 1;
-int bluetoothRx = 0;
+int bluetoothTx = 2;
+int bluetoothRx = 3;
 
 SoftwareSerial bluetooth(bluetoothTx, bluetoothRx);
 
@@ -14,8 +14,8 @@ void setup()
   bluetooth.begin(115200);
   bluetooth.print("$$$");
   delay(100);
-  bluetooth.println("U,9600,N");
-  bluetooth.begin(9600);
+  //bluetooth.println("U,9600,N");
+  //bluetooth.begin(9600);
 }
 
 void loop()
@@ -23,8 +23,9 @@ void loop()
   //Read from bluetooth and write to usb serial 
   if(bluetooth.available())
   {
-    char toSend = (char)bluetooth.read();
-    Serial.print(toSend);
+    byte toSend = (byte)bluetooth.read();
+    //Serial.print(toSend);
+    Serial.println(((char)toSend));
   }
   
   //Read from usb serial to bluetooth
