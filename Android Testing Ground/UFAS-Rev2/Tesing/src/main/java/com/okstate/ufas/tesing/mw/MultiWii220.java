@@ -592,7 +592,7 @@ public class MultiWii220 extends MultirotorData {
 		sendRequestMSP(requestMSP(MSP_EEPROM_WRITE));
 	}
 
-	// //Main Request//////////////////////////////////////////////////
+	// //Main2 Request//////////////////////////////////////////////////
 
 	public void SendRequest1() {
 		if (communication.Connected) {
@@ -632,7 +632,7 @@ public class MultiWii220 extends MultirotorData {
 		}
 	}
 
-	// NEW Main requests///////////////////////////////////////////////
+	// NEW Main2 requests///////////////////////////////////////////////
 
 	int timer3 = -1;
 

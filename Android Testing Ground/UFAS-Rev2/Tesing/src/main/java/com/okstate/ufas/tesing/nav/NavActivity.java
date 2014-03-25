@@ -22,6 +22,7 @@ import android.util.Xml;
 import android.view.ActionMode;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -34,6 +35,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ezio.sec.Sec;
 import com.okstate.ufas.tesing.R;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
@@ -50,6 +52,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.okstate.ufas.tesing.app.App;
+import com.okstate.ufas.tesing.helpers.FilePickerActivity;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -241,9 +244,9 @@ public class NavActivity extends FragmentActivity {
 
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 		setContentView(R.layout.nav_layout);
-		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-		getSupportActionBar().setHomeButtonEnabled(true);
-		getSupportActionBar().setTitle(getString(R.string.Navigation));
+		getActionBar().setDisplayHomeAsUpEnabled(true);
+        getActionBar().setHomeButtonEnabled(true);
+        getActionBar().setTitle(getString(R.string.Navigation));
 
 		TVWPInfo = (TextView) findViewById(R.id.TextViewWPinfo);
 
@@ -255,12 +258,12 @@ public class NavActivity extends FragmentActivity {
 
 			/** Called when a drawer has settled in a completely closed state. */
 			public void onDrawerClosed(View view) {
-				getSupportActionBar().setTitle(getString(R.string.Navigation));
+				getActionBar().setTitle(getString(R.string.Navigation));
 			}
 
 			/** Called when a drawer has settled in a completely open state. */
 			public void onDrawerOpened(View drawerView) {
-				getSupportActionBar().setTitle(getString(R.string.Options));
+				getActionBar().setTitle(getString(R.string.Options));
 				DisplayInfo();
 			}
 

@@ -145,8 +145,8 @@ public class MapWaypointsActivity extends FragmentActivity {
 
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 		setContentView(R.layout.waypoints_map_layout);
-		getSupportActionBar().setDisplayShowTitleEnabled(false);
-		getSupportActionBar().setDisplayShowHomeEnabled(false);
+		getActionBar().setDisplayShowTitleEnabled(false);
+		getActionBar().setDisplayShowHomeEnabled(false);
 
 		TVInfoMap = (TextView) findViewById(R.id.textViewInfoMap);
 

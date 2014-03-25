@@ -89,7 +89,7 @@ public class WaypointActivity extends Activity {
 		app = (App) getApplication();
 		app.ForceLanguage();
 
-		setContentView(R.waypoint_layout);
+		setContentView(R.layout.waypoint_layout);
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
 		TVData = (TextView) findViewById(R.id.textViewData);

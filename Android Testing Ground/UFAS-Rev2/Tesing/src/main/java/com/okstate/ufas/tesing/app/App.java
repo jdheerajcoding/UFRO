@@ -237,11 +237,11 @@ public class App extends Application implements Sensors.Listener {
 
 		tts = new TTS(getApplicationContext());
 
-		prepareSounds();
+		//prepareSounds();
 
 		Say(getString(R.string.Started));
 
-		soundManager.playSound(2);
+		//soundManager.playSound(2);
 
 		notifications = new Notifications(getApplicationContext());
 
