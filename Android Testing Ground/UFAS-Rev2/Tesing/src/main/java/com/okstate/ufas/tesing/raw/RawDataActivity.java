@@ -47,7 +47,7 @@ public class RawDataActivity extends Activity {
 		@Override
 		public void run() {
 
-			app.mw.ProcessSerialData(app.loggingON);
+            app.mw.ProcessSerialData(app.loggingON);
 
 			app.frskyProtocol.ProcessSerialData(false);
 			app.Frequentjobs();

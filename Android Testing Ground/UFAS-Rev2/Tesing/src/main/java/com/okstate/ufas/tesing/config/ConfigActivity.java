@@ -64,6 +64,9 @@ public class ConfigActivity extends Activity {
 	CheckBox CheckBoxBT_New;
 	CheckBox CheckBoxNoDataReceivedWarning;
 
+    RadioButton bluetoothCom;
+    RadioButton serialCom;
+
 	RadioButton RadioNotForce;
 	RadioButton RadioForceEnglish;
 	RadioButton RadioForceGerman;
@@ -157,6 +160,10 @@ public class ConfigActivity extends Activity {
 		CheckBoxBT_New = (CheckBox) findViewById(R.id.CheckBox_BT_New);
 		CheckBoxNoDataReceivedWarning = (CheckBox) findViewById(R.id.checkBoxNoDataReceivedWarning);
 
+        //ADDED
+        bluetoothCom = (RadioButton) findViewById(R.id.BluetoothCom);
+        serialCom = (RadioButton) findViewById(R.id.SerialCom);
+
 		CheckBoxFrskySupport = (CheckBox) findViewById(R.id.checkBoxFrskySupport);
 		CheckBoxFrskySupport.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
@@ -238,6 +245,12 @@ public class ConfigActivity extends Activity {
 		if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB_MR1) {
 			LayoutSerialFTDI.setVisibility(View.GONE);
 		}
+
+        if(serialCom.isChecked()) {
+            app.CommunicationTypeMW = App.COMMUNICATION_TYPE_SERIAL_FTDI;
+        } else if(bluetoothCom.isChecked()) {
+            app.CommunicationTypeMW = App.COMMUNICATION_TYPE_BT;
+        }
 
 		MacAddressBTTV.setText("MAC:" + app.MacAddress);
 		MacAddressBTFrskyTV.setText("MAC:" + app.MacAddressFrsky);

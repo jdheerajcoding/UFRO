@@ -18,12 +18,10 @@
 package com.okstate.ufas.tesing.app;
 
 import android.app.Activity;
-import android.app.AlarmManager;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.app.Application;
 import android.app.Dialog;
-import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -52,6 +50,8 @@ import com.okstate.ufas.tesing.helpers.SoundManager;
 import com.okstate.ufas.tesing.helpers.TTS;
 import com.okstate.ufas.tesing.helpers.VarioSoundClass;
 import com.okstate.ufas.tesing.mw.MultiWii220;
+import com.okstate.ufas.tesing.mw.MultiWii230;
+import com.okstate.ufas.tesing.mw.MultiWii230NAV;
 import com.okstate.ufas.tesing.mw.MultirotorData;
 import com.okstate.ufas.tesing.waypoints.Waypoint;
 
@@ -301,11 +301,11 @@ public class App extends Application implements Sensors.Listener {
 			mw = new MultiWii220(commMW);
 		}
 		if (Protocol == PROTOCOL_230) {
-			//mw = new MultiWii230(commMW);
+			mw = new MultiWii230(commMW);
 		}
 
 		if (Protocol == PROTOCOL_NAV) {
-			//mw = new MultiWii230NAV(commMW);
+			mw = new MultiWii230NAV(commMW);
 		}
 
 		frskyProtocol = new FrskyProtocol(commFrsky);

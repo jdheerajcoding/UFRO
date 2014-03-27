@@ -45,6 +45,7 @@ import com.okstate.ufas.tesing.R;
 import com.okstate.ufas.tesing.app.App;
 import com.okstate.ufas.tesing.communication.BT_New;
 import com.okstate.ufas.tesing.config.ConfigActivity;
+import com.okstate.ufas.tesing.graph.GraphsActivity;
 import com.okstate.ufas.tesing.raw.RawDataActivity;
 
 
@@ -475,8 +476,8 @@ public class MainMultiWiiActivity extends Activity {
 	public void GraphsOnClick(View v) {
 		killme = true;
 		mHandler.removeCallbacksAndMessages(null);
-        Toast.makeText(this, "Unavaiable!",Toast.LENGTH_SHORT).show();
-		//startActivity(new Intent(getApplicationContext(), GraphsActivity.class));
+        //Toast.makeText(this, "Unavaiable!",Toast.LENGTH_SHORT).show();
+		startActivity(new Intent(getApplicationContext(), GraphsActivity.class));
 	}
 
 	public void AdvancedOnClick(View v) {

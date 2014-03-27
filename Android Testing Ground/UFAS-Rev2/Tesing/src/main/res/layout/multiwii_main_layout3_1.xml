@@ -32,7 +32,7 @@
                         android:background="@drawable/custom_button_yellow"
                         android:onClick="Dashboard1OnClick"
                         android:tag="TagDashboard1"
-                        android:text="@string/Dashboard1" />
+                        android:text="@string/RawData" />
 
                     <Button
                         android:id="@+id/button2"
