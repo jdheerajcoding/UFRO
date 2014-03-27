@@ -23,7 +23,7 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.ezio.multiwii.helpers.Functions;
+import com.okstate.ufas.tesing.helpers.Functions;
 
 public class StickView extends View {
 

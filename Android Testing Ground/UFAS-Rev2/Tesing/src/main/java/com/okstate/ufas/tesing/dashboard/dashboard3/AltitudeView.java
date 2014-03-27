@@ -1,21 +1,20 @@
-package com.okstate.ufas.tesing.radio;
-
 /*  MultiWii EZ-GUI
- Copyright (C) <2012>  Bartosz Szczygiel (eziosoft)
+    Copyright (C) <2012>  Bartosz Szczygiel (eziosoft)
 
- This program is free software: you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation, either version 3 of the License, or
- (at your option) any later version.
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
 
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
 
- You should have received a copy of the GNU General Public License
- along with this program.  If not, see <http://www.gnu.org/licenses/>.
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+package com.okstate.ufas.tesing.dashboard.dashboard3;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -29,42 +28,38 @@ import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.View;
 
-
 import com.okstate.ufas.tesing.R;
-import com.okstate.ufas.tesing.helpers.Functions;
+import com.okstate.ufas.tesing.helpers.LowPassFilter;
 
-import java.text.NumberFormat;
+public class AltitudeView extends View {
 
-public class Stick2View extends View {
-
-	NumberFormat format;
 	boolean D = false;
 	Paint mPaint;
-	private Paint paint2 = new Paint();
-
 	Rect DrawingRec;
 	int ww = 0, hh = 0;
-
 	int tmp = 0;
 
-	Bitmap[] bmp = new Bitmap[2];
+	Bitmap[] bmp = new Bitmap[4];
 
 	Matrix matrix = new Matrix();
 
 	Context context;
 
-	public float x, y;
+	public float alt = 150;
 
-	public Stick2View(Context context, AttributeSet attrs) {
+	LowPassFilter lowPassFilter = new LowPassFilter(0.05f);
+
+	public AltitudeView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		this.context = context;
 		init();
 	}
 
-	public void init() {
-
-		bmp[0] = BitmapFactory.decodeResource(context.getResources(), R.drawable.radio2);
-		bmp[1] = BitmapFactory.decodeResource(context.getResources(), R.drawable.radio1);
+	private void init() {
+		bmp[0] = BitmapFactory.decodeResource(context.getResources(), R.drawable.alt3);
+		bmp[1] = BitmapFactory.decodeResource(context.getResources(), R.drawable.alt1);
+		bmp[2] = BitmapFactory.decodeResource(context.getResources(), R.drawable.hand2);
+		bmp[3] = BitmapFactory.decodeResource(context.getResources(), R.drawable.hand1);
 
 		mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 		mPaint.setColor(Color.TRANSPARENT);
@@ -72,22 +67,10 @@ public class Stick2View extends View {
 		mPaint.setTextSize(12);
 
 		DrawingRec = new Rect();
-
-		paint2.setAntiAlias(true);
-		paint2.setColor(Color.YELLOW);
-		paint2.setStyle(Paint.Style.FILL_AND_STROKE);
-		paint2.setStrokeWidth(2);
-		paint2.setTextSize(30);
-
-		format = NumberFormat.getNumberInstance();
-		format.setMinimumFractionDigits(1);
-		format.setMaximumFractionDigits(1);
-		format.setGroupingUsed(false);
 	}
 
-	public void SetPosition(float xx, float yy) {
-		x = Functions.map(xx - 1500, -500, 500, -bmp[0].getWidth() / 3, bmp[0].getWidth() / 3);
-		y = Functions.map(yy - 1500, -500, 500, bmp[0].getHeight() / 3, -bmp[0].getHeight() / 3);
+	public void Set(float alt) {
+		this.alt = lowPassFilter.lowPass(alt);
 		invalidate();
 	}
 
@@ -97,15 +80,27 @@ public class Stick2View extends View {
 		c.drawRect(DrawingRec, mPaint);
 
 		if (!D) {
+			matrix.reset();
+			// matrix.postRotate(map(alt % 100, 0, 100, 0, 360),
+			// bmp[0].getWidth() / 2, bmp[0].getHeight() / 2);
+			matrix.postTranslate((ww - bmp[0].getWidth()) / 2, (hh - bmp[0].getHeight()) / 2);
+			c.drawBitmap(bmp[0], matrix, null);
 
 			matrix.reset();
-			matrix.postTranslate((ww - bmp[1].getWidth()) / 2, (float) ((hh - bmp[1].getHeight()) / 2));
+			matrix.postTranslate((ww - bmp[1].getWidth()) / 2, ((hh - bmp[1].getHeight()) / 2));
 			c.drawBitmap(bmp[1], matrix, null);
 
 			matrix.reset();
-			matrix.postTranslate(((ww - bmp[0].getWidth()) / 2) + x, ((hh - bmp[0].getHeight()) / 2) + y);
-			c.drawBitmap(bmp[0], matrix, null);
+			matrix.preTranslate(0, -bmp[2].getHeight() * 0.30f);
+			matrix.postRotate(map(alt, 0, 1000, 0, 360), bmp[2].getWidth() / 2, bmp[2].getHeight() / 2);
+			matrix.postTranslate((ww - bmp[2].getWidth()) / 2, (hh - bmp[2].getHeight()) / 2);
+			c.drawBitmap(bmp[2], matrix, null);
 
+			matrix.reset();
+			matrix.preTranslate(0, -bmp[3].getHeight() * 0.30f);
+			matrix.postRotate(map(alt % 100, 0, 100, 0, 360), bmp[3].getWidth() / 2, bmp[3].getHeight() / 2);
+			matrix.postTranslate((ww - bmp[3].getWidth()) / 2, (hh - bmp[3].getHeight()) / 2);
+			c.drawBitmap(bmp[3], matrix, null);
 		}
 
 	}
@@ -123,22 +118,18 @@ public class Stick2View extends View {
 		DrawingRec = new Rect(getPaddingLeft(), getPaddingTop(), ww, hh);
 
 		if (!D) {
-			float factor = getFactor(bmp[0], ww, hh);
+			float factor = getFactor(bmp[1], ww, hh);
 
-			bmp[0] = scaleToFill(bmp[0], factor);
+			bmp[0] = scaleToFill(bmp[0], ww, hh);
 			bmp[1] = scaleToFill(bmp[1], factor);
-
+			bmp[2] = scaleToFill(bmp[2], factor);
+			bmp[3] = scaleToFill(bmp[3], factor);
 		}
 
 	}
 
 	@Override
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-		// int parentWidth = MeasureSpec.getSize(widthMeasureSpec);
-		// int parentHeight = MeasureSpec.getSize(heightMeasureSpec);
-		// int size = Math.min(parentHeight, parentWidth);
-		// this.setMeasuredDimension(size, size);
-
 		int desiredWidth = 100;
 		int desiredHeight = 100;
 

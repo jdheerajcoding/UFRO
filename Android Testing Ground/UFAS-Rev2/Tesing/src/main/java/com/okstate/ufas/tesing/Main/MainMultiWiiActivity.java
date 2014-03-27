@@ -45,7 +45,9 @@ import com.okstate.ufas.tesing.R;
 import com.okstate.ufas.tesing.app.App;
 import com.okstate.ufas.tesing.communication.BT_New;
 import com.okstate.ufas.tesing.config.ConfigActivity;
+import com.okstate.ufas.tesing.dashboard.dashboard3.Dashboard3Activity;
 import com.okstate.ufas.tesing.graph.GraphsActivity;
+import com.okstate.ufas.tesing.radio.RadioActivity;
 import com.okstate.ufas.tesing.raw.RawDataActivity;
 
 
@@ -343,7 +345,7 @@ public class MainMultiWiiActivity extends Activity {
 		killme = true;
 		mHandler.removeCallbacksAndMessages(null);
         Toast.makeText(this, "Unavaiable!",Toast.LENGTH_SHORT).show();
-		/*startActivity(new Intent(getApplicationContext(), RadioActivity.class));*/
+		//startActivity(new Intent(getApplicationContext(), RadioActivity.class));
 	}
 
 	public void ConfigOnClick(View v) {
@@ -433,12 +435,12 @@ public class MainMultiWiiActivity extends Activity {
 	}
 
 	public void Dashboard3OnClick(View v) {
-        Toast.makeText(this, "Unavaiable!",Toast.LENGTH_SHORT).show();
-        /*if (app.checkGooglePlayServicesAvailability(this)) {
+        //Toast.makeText(this, "Unavaiable!",Toast.LENGTH_SHORT).show();
+        if (app.checkGooglePlayServicesAvailability(this)) {
 			killme = true;
 			mHandler.removeCallbacksAndMessages(null);
 			startActivity(new Intent(getApplicationContext(), Dashboard3Activity.class));
-		}*/
+		}
 	}
 
 	public void NewMapOnClick(View v) {
@@ -499,7 +501,7 @@ public class MainMultiWiiActivity extends Activity {
 		killme = true;
 		mHandler.removeCallbacksAndMessages(null);
         Toast.makeText(this, "Unavaiable!",Toast.LENGTH_SHORT).show();
-		/*Intent intent = new Intent(Intent.ACTION_VIEW);
+		/*]Intent intent = new Intent(Intent.ACTION_VIEW);
 		intent.setData(Uri.parse("market://details?id=" + getApplicationContext().getPackageName()));
 		startActivity(intent);*/
 	}

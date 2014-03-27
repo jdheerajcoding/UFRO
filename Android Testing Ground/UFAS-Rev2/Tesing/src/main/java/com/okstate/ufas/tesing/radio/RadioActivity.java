@@ -16,17 +16,17 @@
  */
 package com.okstate.ufas.tesing.radio;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.actionbarsherlock.app.SherlockActivity;
-import com.ezio.multiwii.R;
-import com.ezio.multiwii.app.App;
+import com.okstate.ufas.tesing.R;
+import com.okstate.ufas.tesing.app.App;
 
-public class RadioActivity extends SherlockActivity {
+public class RadioActivity extends Activity {
 
 	private boolean killme = false;
 
@@ -131,7 +131,7 @@ public class RadioActivity extends SherlockActivity {
 		TV8 = (TextView) findViewById(R.id.TextView08);
 
 		app.Say(getString(R.string.RadioMode) + " " + String.valueOf(app.RadioMode));
-		getSupportActionBar().hide();
+		getActionBar().hide();
 
 	}
 

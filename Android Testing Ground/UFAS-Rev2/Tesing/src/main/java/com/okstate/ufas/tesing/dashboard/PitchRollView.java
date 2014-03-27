@@ -1,4 +1,4 @@
-package com.okstate.ufas.tesing.radio;
+package com.okstate.ufas.tesing.dashboard;
 
 /*  MultiWii EZ-GUI
  Copyright (C) <2012>  Bartosz Szczygiel (eziosoft)
@@ -29,13 +29,11 @@ import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.View;
 
-
 import com.okstate.ufas.tesing.R;
-import com.okstate.ufas.tesing.helpers.Functions;
 
 import java.text.NumberFormat;
 
-public class Stick2View extends View {
+public class PitchRollView extends View {
 
 	NumberFormat format;
 	boolean D = false;
@@ -53,18 +51,24 @@ public class Stick2View extends View {
 
 	Context context;
 
-	public float x, y;
+	private float angle = -48.3f;
+	public boolean arrow = false;
 
-	public Stick2View(Context context, AttributeSet attrs) {
+	//LowPassFilter lowPassFilter = new LowPassFilter(0.2f);
+
+	public PitchRollView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		this.context = context;
 		init();
 	}
 
 	public void init() {
-
-		bmp[0] = BitmapFactory.decodeResource(context.getResources(), R.drawable.radio2);
-		bmp[1] = BitmapFactory.decodeResource(context.getResources(), R.drawable.radio1);
+		if (arrow) {
+			bmp[0] = BitmapFactory.decodeResource(context.getResources(), R.drawable.level3);
+		} else {
+			bmp[0] = BitmapFactory.decodeResource(context.getResources(), R.drawable.level2);
+		}
+		bmp[1] = BitmapFactory.decodeResource(context.getResources(), R.drawable.level1);
 
 		mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 		mPaint.setColor(Color.TRANSPARENT);
@@ -85,9 +89,9 @@ public class Stick2View extends View {
 		format.setGroupingUsed(false);
 	}
 
-	public void SetPosition(float xx, float yy) {
-		x = Functions.map(xx - 1500, -500, 500, -bmp[0].getWidth() / 3, bmp[0].getWidth() / 3);
-		y = Functions.map(yy - 1500, -500, 500, bmp[0].getHeight() / 3, -bmp[0].getHeight() / 3);
+	public void Set(float angle) {
+		// this.angle = lowPassFilter.lowPass(angle);
+		this.angle = (angle);
 		invalidate();
 	}
 
@@ -103,9 +107,12 @@ public class Stick2View extends View {
 			c.drawBitmap(bmp[1], matrix, null);
 
 			matrix.reset();
-			matrix.postTranslate(((ww - bmp[0].getWidth()) / 2) + x, ((hh - bmp[0].getHeight()) / 2) + y);
+			matrix.postRotate(angle, bmp[0].getWidth() / 2, bmp[0].getHeight() / 2);
+			matrix.postTranslate((ww - bmp[0].getWidth()) / 2, (hh - bmp[0].getHeight()) / 2);
 			c.drawBitmap(bmp[0], matrix, null);
 
+			paint2.setTextSize(Math.min(hh, ww) / 7);
+			c.drawText(format.format(angle), ww / 2 - paint2.measureText(format.format(angle)) / 2, hh / 2f, paint2);
 		}
 
 	}
