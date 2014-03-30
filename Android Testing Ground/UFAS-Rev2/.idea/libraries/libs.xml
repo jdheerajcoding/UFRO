@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Tesing/libs/ftdriver.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Tesing/libs/usbseriallibrary.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Tesing/libs/sec.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
