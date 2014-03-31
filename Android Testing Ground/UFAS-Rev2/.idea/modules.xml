@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Tesing/src/main/main.iml" filepath="$PROJECT_DIR$/Tesing/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tesing/Tesing.iml" filepath="$PROJECT_DIR$/Tesing/Tesing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UFAS-Rev2.iml" filepath="$PROJECT_DIR$/UFAS-Rev2.iml" />
     </modules>
   </component>
 </project>

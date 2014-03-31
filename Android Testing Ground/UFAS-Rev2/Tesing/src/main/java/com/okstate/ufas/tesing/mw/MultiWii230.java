@@ -640,6 +640,7 @@ public class MultiWii230 extends MultirotorData {
 
 	/**
 	 * 0rcRoll 1rcPitch 2rcYaw 3rcThrottle 4rcAUX1 5rcAUX2 6rcAUX3 7rcAUX4
+     * Use this for the Joystick Class
 	 */
 	@Override
 	public void SendRequestMSP_SET_RAW_RC(int[] channels8) {
