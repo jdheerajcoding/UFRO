@@ -1,0 +1,45 @@
+<!-- <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fibonacciStudios.joystickContorller.JoystickMain"
+    tools:ignore="MergeRootFrame" /> -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingLeft="@dimen/activity_horizontal_margin"
+android:paddingRight="@dimen/activity_horizontal_margin"
+android:paddingTop="@dimen/activity_vertical_margin"
+android:paddingBottom="@dimen/activity_vertical_margin"
+tools:context="com.fibonacciStudios.joystickContorller.JoystickMain$PlaceholderFragment">
+
+<view
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    class="com.okstate.ufas.tesing.joystick.DualJoystickView"
+    android:id="@+id/view"
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="New Text"
+    android:id="@+id/textView"
+    android:layout_alignBottom="@+id/editText"
+    android:layout_centerHorizontal="true" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="New Text"
+    android:id="@+id/textView2"
+    android:layout_below="@+id/textView"
+    android:layout_alignLeft="@+id/textView"
+    android:layout_alignStart="@+id/textView" />
+
+
+</RelativeLayout>

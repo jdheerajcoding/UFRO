@@ -47,6 +47,11 @@
             android:screenOrientation="unspecified" >
         </activity>
         <activity
+            android:name=".joystick.JoystickMain"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
             android:name=".raw.RawDataActivity"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="unspecified" >
