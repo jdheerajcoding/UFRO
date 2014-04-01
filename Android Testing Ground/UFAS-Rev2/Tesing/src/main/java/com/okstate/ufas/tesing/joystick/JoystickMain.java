@@ -126,6 +126,15 @@ public class JoystickMain extends Activity {
             app.mw.rcRoll = (int)(MULTIPLIER*dualJoystickView.stickR.getYCoor()+1000);
             app.mw.rcPitch = (int)(MULTIPLIER*dualJoystickView.stickL.getXCoor()+1000);
             app.mw.rcYaw = (int)(MULTIPLIER*dualJoystickView.stickL.getYCoor()+1000);
+
+            Log.d("rcThrottle", ""+app.mw.rcThrottle);
+            Log.d("rcYaw", ""+app.mw.rcYaw);
+            Log.d("rcPitch", ""+app.mw.rcPitch);
+            Log.d("rcRoll", ""+app.mw.rcRoll);
+            Log.d("rcAUX1", ""+app.mw.rcAUX1);
+            Log.d("rcAUX2", ""+app.mw.rcAUX2);
+            Log.d("rcAUX3", ""+app.mw.rcAUX3);
+            Log.d("rcAUX4", ""+app.mw.rcAUX4);
         }
 
         return super.dispatchTouchEvent(event);

@@ -117,12 +117,13 @@ public class MultiWii230 extends MultirotorData {
 
 		int i;
 		int icmd = (int) (cmd & 0xFF);
+        //Log.e("icmd", ""+icmd);
 		switch (icmd) {
 		case MSP_IDENT:
 			version = read8();
 			multiType = read8();
 			MSPversion = read8(); // MSP version
-			multiCapability = read32();// capability
+			multiCapability = read32();  // capability
 			if ((multiCapability & 1) > 0)
 				multi_Capability.RXBind = true;
 			if ((multiCapability & 4) > 0)
