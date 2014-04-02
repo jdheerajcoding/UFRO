@@ -9,6 +9,7 @@ package com.okstate.ufas.tesing.joystick;
         import android.graphics.Paint;
         import android.util.AttributeSet;
         import android.view.MotionEvent;
+        import android.view.SurfaceView;
         import android.view.View;
         import android.view.ViewGroup;
         import android.widget.LinearLayout;
@@ -23,7 +24,7 @@ public class DualJoystickView extends LinearLayout {
     public JoystickView stickL;
     public JoystickView stickR;
 
-    private View pad;
+    private SurfaceView pad;
 
 
     public DualJoystickView(Context context) {
@@ -52,7 +53,7 @@ public class DualJoystickView extends LinearLayout {
             stickR.setThrottle(false);
         }
 
-        pad = new View(getContext());
+        pad = new SurfaceView(getContext());
     }
 
     @Override

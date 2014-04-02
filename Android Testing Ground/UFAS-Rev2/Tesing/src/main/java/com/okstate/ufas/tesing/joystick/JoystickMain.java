@@ -107,34 +107,49 @@ public class JoystickMain extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+    private int map(int x, int in_min, int in_max, int out_min, int out_max)
+    {
+        return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+    }
+
     /**
      * 0rcRoll 1rcPitch 2rcYaw 3rcThrottle 4rcAUX1 5rcAUX2 6rcAUX3 7rcAUX4
-     * // interval [1000;2000]
+     * // interval [1150;1850]
      * Use this for the Joystick Class
      */
     public boolean dispatchTouchEvent(MotionEvent event) {
 
-        if(leftView!=null && rightView!=null)  {
-            leftView.setText("L: "+dualJoystickView.stickL.getXCoor()/1000+", "+dualJoystickView.stickL.getYCoor()/1000);
+        Log.i("INFO", "TOUCHED");
 
-            rightView.setText("R: "+dualJoystickView.stickR.getXCoor()/1000+", "+dualJoystickView.stickR.getYCoor()/1000);
+        if(leftView!=null && rightView!=null)  {
+
+            int throttle = map((int)(MULTIPLIER*dualJoystickView.stickR.getYCoor()*4), -1000, 1000, 1150, 1850);
+            int roll = map((int)(MULTIPLIER*dualJoystickView.stickL.getXCoor()*4), -1000, 1000, 1150, 1850);
+            int pitch = map((int)(MULTIPLIER * dualJoystickView.stickL.getYCoor()*4), -1000, 1000, 1150, 1850);
+            int yaw = map((int)(MULTIPLIER*dualJoystickView.stickR.getXCoor()*4), -1000, 1000, 1150, 1850);
+
+            leftView.setText("L: "+throttle+", "+yaw);
+
+            rightView.setText("R: "+roll+", "+pitch);
+
             rc = new int[]{(int) (MULTIPLIER*dualJoystickView.stickR.getXCoor() + 1000),
                     (int)(MULTIPLIER*dualJoystickView.stickR.getYCoor()+1000),
                     (int)(MULTIPLIER*dualJoystickView.stickL.getXCoor()+1000),
                     (int)(MULTIPLIER*dualJoystickView.stickL.getYCoor()+1000),0,0,0,0};
-            app.mw.rcThrottle = (int) (MULTIPLIER*dualJoystickView.stickR.getXCoor() + 1000);
-            app.mw.rcRoll = (int)(MULTIPLIER*dualJoystickView.stickR.getYCoor()+1000);
-            app.mw.rcPitch = (int)(MULTIPLIER*dualJoystickView.stickL.getXCoor()+1000);
-            app.mw.rcYaw = (int)(MULTIPLIER*dualJoystickView.stickL.getYCoor()+1000);
 
-            Log.d("rcThrottle", ""+app.mw.rcThrottle);
+            app.mw.rcThrottle = throttle;
+            app.mw.rcRoll = roll;
+            app.mw.rcPitch = pitch;
+            app.mw.rcYaw = yaw;
+
+            /*Log.d("rcThrottle", ""+app.mw.rcThrottle);
             Log.d("rcYaw", ""+app.mw.rcYaw);
             Log.d("rcPitch", ""+app.mw.rcPitch);
             Log.d("rcRoll", ""+app.mw.rcRoll);
             Log.d("rcAUX1", ""+app.mw.rcAUX1);
             Log.d("rcAUX2", ""+app.mw.rcAUX2);
             Log.d("rcAUX3", ""+app.mw.rcAUX3);
-            Log.d("rcAUX4", ""+app.mw.rcAUX4);
+            Log.d("rcAUX4", ""+app.mw.rcAUX4);*/
         }
 
         return super.dispatchTouchEvent(event);
@@ -142,17 +157,36 @@ public class JoystickMain extends Activity {
 
     public boolean onTouchEvent(MotionEvent ev) {
 
-        leftView.setText("L: "+"0.0"+", "+"0.0");
-        rightView.setText("R: "+"0.0"+", "+"0.0");
-        rc = new int[]{(int) (MULTIPLIER*dualJoystickView.stickR.getXCoor() + 1000),
-                (int)(MULTIPLIER*dualJoystickView.stickR.getYCoor()+1000),
-                (int)(MULTIPLIER*dualJoystickView.stickL.getXCoor()+1000),
-                (int)(MULTIPLIER*dualJoystickView.stickL.getYCoor()+1000),0,0,0,0};
+        if(leftView!=null && rightView!=null)  {
 
-        app.mw.rcThrottle = (int) (MULTIPLIER*dualJoystickView.stickR.getXCoor() + 1000);
-        app.mw.rcRoll = (int)(MULTIPLIER*dualJoystickView.stickR.getYCoor()+1000);
-        app.mw.rcPitch = (int)(MULTIPLIER*dualJoystickView.stickL.getXCoor()+1000);
-        app.mw.rcYaw = (int)(MULTIPLIER*dualJoystickView.stickL.getYCoor()+1000);
+            int throttle = map((int)(MULTIPLIER*dualJoystickView.stickR.getYCoor()*4), -1000, 1000, 1150, 1850);
+            int roll = map((int)(MULTIPLIER*dualJoystickView.stickL.getXCoor()*4), -1000, 1000, 1150, 1850);
+            int pitch = map((int)(MULTIPLIER * dualJoystickView.stickL.getYCoor()*4), -1000, 1000, 1150, 1850);
+            int yaw = map((int)(MULTIPLIER*dualJoystickView.stickR.getXCoor()*4), -1000, 1000, 1150, 1850);
+
+            leftView.setText("L: "+throttle+", "+yaw);
+
+            rightView.setText("R: "+roll+", "+pitch);
+
+            rc = new int[]{(int) (MULTIPLIER*dualJoystickView.stickR.getXCoor() + 1000),
+                    (int)(MULTIPLIER*dualJoystickView.stickR.getYCoor()+1000),
+                    (int)(MULTIPLIER*dualJoystickView.stickL.getXCoor()+1000),
+                    (int)(MULTIPLIER*dualJoystickView.stickL.getYCoor()+1000),0,0,0,0};
+
+            app.mw.rcThrottle = throttle;
+            app.mw.rcRoll = roll;
+            app.mw.rcPitch = pitch;
+            app.mw.rcYaw = yaw;
+
+            /*Log.d("rcThrottle", ""+app.mw.rcThrottle);
+            Log.d("rcYaw", ""+app.mw.rcYaw);
+            Log.d("rcPitch", ""+app.mw.rcPitch);
+            Log.d("rcRoll", ""+app.mw.rcRoll);
+            Log.d("rcAUX1", ""+app.mw.rcAUX1);
+            Log.d("rcAUX2", ""+app.mw.rcAUX2);
+            Log.d("rcAUX3", ""+app.mw.rcAUX3);
+            Log.d("rcAUX4", ""+app.mw.rcAUX4);*/
+        }
 
         return super.onTouchEvent(ev);
     }

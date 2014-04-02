@@ -12,6 +12,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.HapticFeedbackConstants;
 import android.view.MotionEvent;
+import android.view.SurfaceView;
 import android.view.View;
 
 public class JoystickView extends View {
@@ -258,8 +259,13 @@ public class JoystickView extends View {
 
         int d = Math.min(getMeasuredWidth(), getMeasuredHeight());
 
+        //
+        //d=200;
+
         dimX = d;
         dimY = d;
+
+        //Log.e("Dim: ", ""+" "+getMeasuredWidth()+ " : " + getMeasuredHeight());
 
         cX = d / 2;
         cY = d / 2;
@@ -268,6 +274,8 @@ public class JoystickView extends View {
         handleRadius = (int)(d * 0.25);
         handleInnerBoundaries = handleRadius;
         movementRadius = Math.min(cX, cY) - handleInnerBoundaries;
+        Log.d("Size: ", "bgRadius: " + bgRadius + " MovementRadius: " + movementRadius);
+
     }
 
     private int measure(int measureSpec) {
@@ -319,6 +327,7 @@ public class JoystickView extends View {
 
 //              Log.d(TAG, String.format("touch(%f,%f)", touchX, touchY));
 //              Log.d(TAG, String.format("onDraw(%.1f,%.1f)\n\n", handleX, handleY));
+        //invalidate();
         canvas.restore();
     }
 

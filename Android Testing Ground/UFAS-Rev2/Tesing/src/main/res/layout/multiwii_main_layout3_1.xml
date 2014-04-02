@@ -42,7 +42,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/custom_button_yellow"
                         android:onClick="Dashboard2OnClick"
-                        android:text="Controler" />
+                        android:text="Controller" />
                 </TableRow>
 
                 <TableRow

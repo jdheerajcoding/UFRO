@@ -48,6 +48,7 @@ import com.okstate.ufas.tesing.config.ConfigActivity;
 import com.okstate.ufas.tesing.dashboard.dashboard3.Dashboard3Activity;
 import com.okstate.ufas.tesing.graph.GraphsActivity;
 import com.okstate.ufas.tesing.joystick.JoystickMain;
+import com.okstate.ufas.tesing.joystick.rc_testing;
 import com.okstate.ufas.tesing.radio.RadioActivity;
 import com.okstate.ufas.tesing.raw.RawDataActivity;
 
@@ -346,7 +347,7 @@ public class MainMultiWiiActivity extends Activity {
 		killme = true;
 		mHandler.removeCallbacksAndMessages(null);
         Toast.makeText(this, "Unavaiable!",Toast.LENGTH_SHORT).show();
-		//startActivity(new Intent(getApplicationContext(), RadioActivity.class));
+		//startActivity(new Intent(getApplicationContext(), rc_testing.class));
 	}
 
 	public void ConfigOnClick(View v) {
@@ -431,8 +432,8 @@ public class MainMultiWiiActivity extends Activity {
 	public void Dashboard2OnClick(View v) {
 		killme = true;
 		mHandler.removeCallbacksAndMessages(null);
-        Toast.makeText(this, "Controller",Toast.LENGTH_SHORT).show();
-		startActivity(new Intent(getApplicationContext(), JoystickMain.class));
+        //Toast.makeText(this, "Controller",Toast.LENGTH_SHORT).show();
+		startActivity(new Intent(getApplicationContext(), rc_testing.class));
 	}
 
 	public void Dashboard3OnClick(View v) {
