@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/connectbackground"
+    >
+    <!--        
+    Hello this is Dheeraj
+    android:text="this is text"
+     android:drawableTop="@drawable/home_icon_test"-->
+
+
+
+	    <ImageButton
+	        android:id="@+id/ButtonBluetooth"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft = "0dp"
+	        android:background="@drawable/bluetooth"
+	        android:textColor="#FFFFFF" 
+	        />
+
+	    
+	    
+	    
+	    <ImageButton
+	        android:id="@+id/ButtonWifi"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="102dp"
+	        android:background="@drawable/wifi"
+	       	android:layout_toRightOf="@+id/ButtonBluetooth"
+		/>
+
+
+
+	    <ImageButton
+	        android:id="@+id/ButtonTele"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/tele" 
+	        android:layout_marginTop="102dp"
+	       	android:layout_toRightOf="@+id/ButtonWifi"
+	        />
+	    
+	    <ImageButton
+	        android:id="@+id/ButtonHow"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/how" 
+	        android:layout_marginTop="102dp"
+	        android:layout_toRightOf="@+id/ButtonTele"
+	        />
+
+</RelativeLayout>

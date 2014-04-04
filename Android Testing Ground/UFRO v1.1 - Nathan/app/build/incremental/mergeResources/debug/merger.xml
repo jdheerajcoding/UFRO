@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="main" >
+        <source path="D:\Android Testing Ground\UFRO v11\app\src\main\res" >
+            <file
+                name="counter_bg"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable\counter_bg.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="list_item_bg_normal"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable\list_item_bg_normal.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="list_item_bg_pressed"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable\list_item_bg_pressed.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="list_selector"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable\list_selector.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="ic_communities"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-hdpi\ic_communities.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="ic_drawer"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-hdpi\ic_drawer.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="ic_home"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-hdpi\ic_home.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-hdpi\ic_launcher.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="ic_pages"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-hdpi\ic_pages.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="ic_people"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-hdpi\ic_people.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="ic_photos"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-hdpi\ic_photos.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="ic_whats_hot"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-hdpi\ic_whats_hot.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="ic_communities"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-mdpi\ic_communities.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="ic_drawer"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-mdpi\ic_drawer.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="ic_home"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-mdpi\ic_home.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-mdpi\ic_launcher.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="ic_pages"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-mdpi\ic_pages.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="ic_people"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-mdpi\ic_people.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="ic_photos"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-mdpi\ic_photos.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="ic_whats_hot"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-mdpi\ic_whats_hot.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="bluetooth"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-xhdpi\bluetooth.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="bluetoothpressed"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-xhdpi\bluetoothpressed.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="connectbackground"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-xhdpi\connectbackground.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="controller"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-xhdpi\controller.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="controllernew"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-xhdpi\controllernew.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="how"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-xhdpi\how.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="howpressed"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-xhdpi\howpressed.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="ic_connect"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-xhdpi\ic_connect.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="ic_controller"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-xhdpi\ic_controller.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="ic_disconnect"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-xhdpi\ic_disconnect.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="ic_drawer"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-xhdpi\ic_drawer.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="ic_graph"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-xhdpi\ic_graph.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="ic_home"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-xhdpi\ic_home.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-xhdpi\ic_launcher.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="ic_overview"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-xhdpi\ic_overview.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="tele"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-xhdpi\tele.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="telepressed"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-xhdpi\telepressed.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="wifi"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-xhdpi\wifi.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="wifipressed"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-xhdpi\wifipressed.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="ic_communities"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-xxhdpi\ic_communities.png"
+                qualifiers="xxhdpi"
+                type="drawable" />
+            <file
+                name="ic_home"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-xxhdpi\ic_home.png"
+                qualifiers="xxhdpi"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-xxhdpi\ic_launcher.png"
+                qualifiers="xxhdpi"
+                type="drawable" />
+            <file
+                name="ic_pages"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-xxhdpi\ic_pages.png"
+                qualifiers="xxhdpi"
+                type="drawable" />
+            <file
+                name="ic_people"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-xxhdpi\ic_people.png"
+                qualifiers="xxhdpi"
+                type="drawable" />
+            <file
+                name="ic_photos"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-xxhdpi\ic_photos.png"
+                qualifiers="xxhdpi"
+                type="drawable" />
+            <file
+                name="ic_whats_hot"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-xxhdpi\ic_whats_hot.png"
+                qualifiers="xxhdpi"
+                type="drawable" />
+            <file
+                name="activity_main"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\layout\activity_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="drawer_list_item"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\layout\drawer_list_item.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="fragment_connect"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\layout\fragment_connect.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="fragment_controller"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\layout\fragment_controller.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="fragment_disconnect"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\layout\fragment_disconnect.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="fragment_graphs"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\layout\fragment_graphs.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="fragment_home"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\layout\fragment_home.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="fragment_overview"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\layout\fragment_overview.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="main"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\menu\main.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\values\color.xml"
+                qualifiers="" >
+                <color name="list_background_pressed" >#992416
+                </color>
+                <color name="counter_text_bg" >#626262
+                </color>
+                <color name="list_item_title" >#fff
+                </color>
+                <color name="list_background" >#303030
+                </color>
+                <color name="list_divider" >#272727
+                </color>
+                <color name="counter_text_color" >#c5c4c4
+                </color>
+            </file>
+            <file
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\values\dimens.xml"
+                qualifiers="" >
+                <dimen name="activity_horizontal_margin" >16dp
+                </dimen>
+                <dimen name="activity_vertical_margin" >16dp
+                </dimen>
+            </file>
+            <file
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\values\strings.xml"
+                qualifiers="" >
+                <string-array name="nav_drawer_items" >
+                    <item>
+Home
+                    </item>
+                    <item>
+Connect
+                    </item>
+                    <item>
+Overview
+                    </item>
+                    <item>
+Controller
+                    </item>
+                    <item>
+Graphs
+                    </item>
+                    <item>
+Disconnect
+                    </item>
+                </string-array>
+
+                <string name="action_settings" >Settings
+                </string>
+                <string name="yellow" >#ffff00
+                </string>
+                <string name="app_name" >UFRO
+                </string>
+
+                <array name="nav_drawer_icons" >
+                    <item>
+@drawable/ic_home
+                    </item>
+                    <item>
+@drawable/ic_connect
+                    </item>
+                    <item>
+@drawable/ic_overview
+                    </item>
+                    <item>
+@drawable/ic_controller
+                    </item>
+                    <item>
+@drawable/ic_graph
+                    </item>
+                    <item>
+@drawable/ic_disconnect
+                    </item>
+                </array>
+
+                <string name="desc_list_item_icon" >Item Icon
+                </string>
+                <string name="hello_world" >Hello world!
+                </string>
+                <string name="drawer_open" >Slider Menu Opened
+                </string>
+                <string name="drawer_close" >Slider Menu Closed
+                </string>
+            </file>
+            <file
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\values\styles.xml"
+                qualifiers="" >
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Light" >
+
+                    <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+                    -->
+                </style>
+
+                <style
+                    name="AppTheme"
+                    parent="AppBaseTheme" >
+
+                    <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+                </style>
+            </file>
+            <file
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\values-sw720dp-land\dimens.xml"
+                qualifiers="sw720dp-land" >
+                <dimen name="activity_horizontal_margin" >128dp
+                </dimen>
+            </file>
+            <file
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\values-v11\styles.xml"
+                qualifiers="v11" >
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Holo.Light" >
+
+                    <!-- API 11 theme customizations can go here. -->
+                </style>
+            </file>
+            <file
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\values-v14\styles.xml"
+                qualifiers="v14" >
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Holo.Light" >
+
+                    <!-- API 14 theme customizations can go here. -->
+                </style>
+            </file>
+            <file
+                name="bluetooth_small"
+                path="D:\Android Testing Ground\UFRO v11\app\src\main\res\drawable-xhdpi\bluetooth_small.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+        </source>
+        <source path="D:\Android Testing Ground\UFRO v11\app\build\res\rs\debug" />
+        <source path="D:\Android Testing Ground\UFRO v11\app\build\res\generated\debug" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="D:\Android Testing Ground\UFRO v11\app\src\debug\res" />
+    </dataSet>
+
+</merger>
